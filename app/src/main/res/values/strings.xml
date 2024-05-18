@@ -2,4 +2,11 @@
     <string name="app_name">PangClothing</string>
     <string name="goBack">goBack</string>
     <string name="myCart">My Cart</string>
+    <string name="prodImage">Image</string>
+    <string name="prodName">Product Name</string>
+    <string name="prodDesc">Description</string>
+    <string name="prodPrice">100.00</string>
+    <string name="deleteBtn">Delete</string>
+    <string name="dollarSign">$</string>
+
 </resources>
