@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import java.nio.file.Files;
-
 import Backend.Entity.Account;
 
 public class Menu extends AppCompatActivity {
@@ -34,12 +32,12 @@ public class Menu extends AppCompatActivity {
     }
 
     private void initId(){
-        output_firstname = (TextView) findViewById(R.id.output_firstname);
-        output_lastname = (TextView) findViewById(R.id.output_lastname);
-        output_address = (TextView) findViewById(R.id.output_address);
-        output_phonenumber = (TextView) findViewById(R.id.output_phonenumber);
-        output_email = (TextView) findViewById(R.id.output_email);
-        output_password = (TextView) findViewById(R.id.output_password);
+        output_firstname = findViewById(R.id.output_firstname);
+        output_lastname = findViewById(R.id.output_lastname);
+        output_address = findViewById(R.id.output_address);
+        output_phonenumber = findViewById(R.id.output_phonenumber);
+        output_email = findViewById(R.id.output_email);
+        output_password = findViewById(R.id.output_password);
 
     }
 }

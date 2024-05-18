@@ -1,7 +1,6 @@
 package Backend;
 
 import android.util.Log;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -12,7 +11,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.function.Consumer;
-import java.util.function.Function;
 
 import Backend.Entity.Account;
 
