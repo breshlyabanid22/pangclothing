@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "95541196021",
+    "firebase_url": "https://sampleproject-76c8d-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "sampleproject-76c8d",
+    "storage_bucket": "sampleproject-76c8d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95541196021:android:55bbba512d8721f0db01bc",
+        "android_client_info": {
+          "package_name": "com.example.firebase_testing"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMnqTjpRW8V_yTt-EWK9GI42IHO7tLh-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95541196021:android:d0e4d3f23d2d12bfdb01bc",
+        "android_client_info": {
+          "package_name": "com.example.pangclothing"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMnqTjpRW8V_yTt-EWK9GI42IHO7tLh-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

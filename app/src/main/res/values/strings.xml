@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PangClothing</string>
+    <string name="goBack">goBack</string>
+    <string name="myCart">My Cart</string>
+</resources>
