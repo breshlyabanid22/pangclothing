@@ -17,9 +17,6 @@ public class Product {
         this.price = price;
         this.imagePath = image_path;
     }
-//    public String getKey() {
-//        return key;
-//    }
     public String getProductName() { return productName; }
 
     public String getDescription() {

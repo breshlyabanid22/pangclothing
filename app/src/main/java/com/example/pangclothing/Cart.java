@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,11 +24,13 @@ public class Cart extends AppCompatActivity {
 
     private List<Product> productList;
     ProductAdapter productAdapter;
+    private TextView totalPriceTV;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
 
+        totalPriceTV = findViewById(R.id.totalPrice);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         productList = new ArrayList<>();
@@ -37,7 +40,7 @@ public class Cart extends AppCompatActivity {
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Items");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
-            @SuppressLint("NotifyDataSetChanged")
+            @SuppressLint({"NotifyDataSetChanged", "DefaultLocale"})
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 productList.clear();
@@ -48,8 +51,9 @@ public class Cart extends AppCompatActivity {
                         productList.add(product);
                     }
                 }
-//                productAdapter = new ProductAdapter(Cart.this, productList);
                 productAdapter.notifyDataSetChanged();
+                double totalPrice = calculateTotalPrice();
+                totalPriceTV.setText(String.format("$%.2f", totalPrice));
             }
 
             @Override
@@ -58,6 +62,13 @@ public class Cart extends AppCompatActivity {
             }
         });
 
+    }
+    private double calculateTotalPrice() {
+        double totalPrice = 0.0;
+        for (Product product : productList) {
+            totalPrice += product.getPrice();
+        }
+        return totalPrice;
     }
 
 }

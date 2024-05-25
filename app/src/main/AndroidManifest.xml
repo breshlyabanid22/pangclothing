@@ -12,6 +12,9 @@
         android:theme="@style/Theme.PangClothing"
         tools:targetApi="31">
         <activity
+            android:name=".Checkout"
+            android:exported="false" />
+        <activity
             android:name=".Cart"
             android:exported="true" />
         <activity
